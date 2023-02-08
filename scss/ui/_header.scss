@@ -1,34 +1,55 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.site-header {
-    @include m.bgImage('../img/header.jpg', v.$secundarioOpacity );
-    padding: 5rem 0;
+.viajes {
+    background-image: url('../../img/portada.jpg');
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    .logo {
-        max-width: 20rem;
-        margin: 0 auto;
-        @include m.tablet { 
-            margin: 0;
-        }
-    }
-    .contenido-header {
-        padding: 10rem 0;
-        @include m.desktop { 
-            padding: 15rem 0;
+    &__barra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2 0rem;
+
+        @include m.tablet {
+            flex-direction: row;
+
+            justify-content: space-between;
+            padding: 2rem 0;
         }
 
-        h1 {
-            color: v.$blanco;
-            font-size: 4.5rem;
-            @include m.tablet { 
-                font-size: 6rem;
-                max-width: 50%;
+        &__logo {
+            width: 200px;
+            @include m.tablet {
+
             }
-            @include m.desktop { 
-                max-width: 40%;
-            }
-            
+
         }
+
+        &__menu {
+            text-transform: uppercase;
+            font-size: 2rem;
+
+            a {
+                padding: 0 2rem;
+
+            }
+
+           
+
+        }
+
+        &__login {
+            width: 200px;
+            // background-color: v.$primario;
+            // border-radius: 1rem;
+            text-align: center;
+
+        }
+
+
     }
 }
