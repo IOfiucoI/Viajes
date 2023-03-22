@@ -48,7 +48,7 @@ function imagenes() {
 
 function dev() {
     watch( 'scss/**/*.scss', css );
-    watch( 'img/**/*', imagenes );
+    // watch( 'img/**/*', imagenes );
 }
 
 
